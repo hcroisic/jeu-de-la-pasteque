@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jeu de la pastèque</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="root">
+        <h1>Jeu de la pastèque</h1>
+        <p class="consignes">
+            Vise avec <kbd>←</kbd> <kbd>→</kbd>, lâche avec <kbd>Espace</kbd>, rejoue avec <kbd>R</kbd>.
+        </p>
+    </div>
+
+    <main class="jeu">
+        <div class="caisse">
+            <canvas id="monCanvas" width="400" height="600"></canvas>
+        </div>
+
+        <aside class="panneau">
+            <section class="carte">
+                <h2>Ton score</h2>
+                <form id="formScore" hidden>
+                    <input id="pseudo" placeholder="Ton pseudo" maxlength="20" required />
+                    <button type="submit">Enregistrer mon score</button>
+                </form>
+                <p id="message"></p>
+            </section>
+
+            <section class="carte">
+                <h2>Classement</h2>
+                <ol id="classement"></ol>
+            </section>
+        </aside>
+    </main>
+
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
